@@ -1,0 +1,97 @@
+html {
+    font-size: 62.5%;
+}
+$card-bg: rgba(255, 255, 255, 1);
+$radius: 1.6rem;
+$main-title-text-color: rgba(0, 0, 0, 1);
+$subtitle-text-color: rgba(7, 18, 16, 1);
+$box-shadow: rgba(0, 0, 0, 0.08);
+$mob-main-titl-color: rgba(24, 59, 86, 1);
+
+.main-about {
+    width: 100%;
+}
+.about-container {
+    max-width: 116.1rem;
+    margin: 0 auto;
+    padding: 2rem; 
+    position: relative;
+}
+.about-container::before {
+    content: "";
+    position: absolute;
+    border: 0.6rem solid $mob-main-titl-color;
+    border-top: 0.6rem solid transparent;
+    border-radius: 50%;
+    position: relative; 
+    width: 12rem;
+    height: 12rem;
+
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    .section-title-h2 {
+        color: $mob-main-titl-color;
+        font-size: clamp(3.6rem, 5vw, 4.2rem);
+        font-weight: 400;
+        padding: 2rem;
+    }
+    .section-subtitle-p {
+        font-size: clamp(1.6rem, 5vw, 1.8rem);
+        color: $subtitle-text-color;
+        font-weight: 400;
+    }
+}
+.about-cards-wrapper {
+    width: 100%;
+    margin-bottom: 2.6rem; 
+  
+}
+.about-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;;
+    background-color: $card-bg;
+    border-radius: clamp(1.139rem, 5vw, 1.6rem);
+    box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.08);
+}
+.card-icon {
+    display: inline-block;
+    transform: translateY(-30%);
+}
+.card-title-h3 {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    text-align: center;
+    gap: 1.06rem;
+}
+.card-text-p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 5wv, 1.659rem);
+    line-height: 2.8rem;
+    color: $subtitle-text-color;
+    margin-bottom: 4.81rem;
+}
+
+@media (max-width: 76.8rem) {
+    .circle::before {
+        display: none;
+    }
+}
+@media (max-width: 76.8rem) {
+    .about-cards-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .about-card {
+        flex: 1 1 calc( 33.333% - 1rem);
+    }
+}

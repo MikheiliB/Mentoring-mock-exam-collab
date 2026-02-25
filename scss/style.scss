@@ -1,3 +1,9 @@
+// START: About, Services, Stories Sections - (Julie)
+@use "about";
+@use "services";
+@use "stories";
+// END: My sections
+
 *, *:before, *:after{
   box-sizing: border-box;
 }
@@ -43,3 +49,4 @@ table{
 input{
   border-radius: 0;
 }
+
