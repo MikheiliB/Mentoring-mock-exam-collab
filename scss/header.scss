@@ -38,6 +38,10 @@
   display: none;
 }
 
+.header-bar-theme-btn-desk {
+    display: none;
+}
+
 .header-nav.menu-open .header-bar-burger-icon {
   display: none;
 }
@@ -111,6 +115,10 @@
   .header-bar-logo, .header-bar-theme-btn, .header-bar-burger-icon, .header-bar-x-icon {
     display: none;
   }
+
+  .header-bar-theme-btn-desk {
+    display: block;
+}
 
   .header-burger {
     position: static;
