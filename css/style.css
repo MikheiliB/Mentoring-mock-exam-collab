@@ -1,0 +1,153 @@
+html {
+  font-size: 62.5%;
+}
+
+.main-about {
+  max-width: 144rem;
+  margin: 3.2rem 2.8rem 2.6rem 2.8rem;
+}
+
+.about-container {
+  max-width: 116.1rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  border: 0.6rem solid rgb(24, 59, 86);
+  border-top: 0.6rem solid transparent;
+  border-radius: 50%;
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  bottom: -4rem;
+  left: -4rem;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.about-header .section-title-h2 {
+  color: rgb(24, 59, 86);
+  font-size: clamp(3.6rem, 5vw, 4.2rem);
+  font-weight: 400;
+  padding: 2rem;
+}
+.about-header .section-subtitle-p {
+  font-size: 1.6rem;
+  color: rgb(7, 18, 16);
+  font-weight: 400;
+}
+
+.about-cards-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2.6rem;
+}
+
+.about-card {
+  max-width: 26.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: clamp(1.139rem, 5vw, 1.6rem);
+  box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  display: flex;
+  transform: translateY(-70%);
+}
+
+.card-title-h3 {
+  font-family: Plus Jakarta Sans;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 1.8vw, 2.2rem);
+  text-align: center;
+  gap: 1.06rem;
+}
+
+.card-text-p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.6rem;
+  padding: 2rem;
+  line-height: 180%;
+  color: rgb(7, 18, 16);
+  margin-bottom: 4.81rem;
+}
+
+@media (max-width: 76.8rem) {
+  .about-container::before {
+    display: none;
+  }
+}
+@media (max-width: 102.4rem) {
+  .about-cards-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about-card {
+    max-width: 32rem;
+  }
+}
+.test {
+  color: red;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
