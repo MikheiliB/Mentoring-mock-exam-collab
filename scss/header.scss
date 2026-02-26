@@ -8,7 +8,7 @@
 
 
 .header-bar {
-    width: 100vw;
+    width: 100%;
     height: 6.4rem;
     display: flex;
     flex-direction: row;
@@ -27,17 +27,34 @@
         display: block;
     }
 
-    &-burger-icon {
-        display: block;
-    }
-    &-x-icon {
-        display: none;
-    }
+
+}
+
+.header-burger-logo {
+    display: none;
+}
+
+.header-bar-x-icon {
+  display: none;
+}
+
+.header-nav.menu-open .header-bar-burger-icon {
+  display: none;
+}
+
+.header-nav.menu-open .header-bar-x-icon {
+  display: block;
+}
+
+.header-nav.menu-open .header-burger {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .header-burger {
     @include flex-col-center();
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: white;
     gap: 4.3rem;
@@ -49,6 +66,7 @@
     transform: translateY(-20px);
     opacity: 0;
     pointer-events: none;
+    z-index: 5;
 
     transition: 
         transform 0.35s ease,
@@ -79,6 +97,71 @@
             color: white;
             font-weight: 600;
         }
+        
+        &-desk {
+            @include flex-col-center();
+            font-size: 1.6rem;
+            gap: 2.8rem;
+        }
     }
+}
 
+@media (min-width: 768px) {
+
+  .header-bar-logo, .header-bar-theme-btn, .header-bar-burger-icon, .header-bar-x-icon {
+    display: none;
+  }
+
+  .header-burger {
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    height: auto;
+    padding: 0;
+    flex-direction: row;
+    gap: 4rem;
+    background: none;
+    justify-content: space-between;
+  }
+
+  .header-burger-links,
+  .header-burger-sign {
+    flex-direction: row;
+    width: auto;
+    gap: 6rem;
+    font-size: 1.6rem;
+  }
+  
+  .header-bar {
+    display: none;
+  }
+
+.header-nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem 10rem;
+    display: flex;
+    align-items:center;
+}
+
+  .header-burger-logo {
+    font-size: 2rem;
+    display: block;
+  }
+  
+  .header-burger-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-bar-theme-btn-desk {
+    padding-top: 0.5rem;
+  }
+
+  .header-burger-sign-desk {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
 }

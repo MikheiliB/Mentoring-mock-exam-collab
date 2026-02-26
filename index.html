@@ -13,18 +13,12 @@
 
     <script>
     function openMenu() {
-        document.querySelector('.header-burger').classList.add('active');
-        document.querySelector('.header-bar-burger-icon').style.display = 'none';
-        document.querySelector('.header-bar-theme-btn').style.display = 'none';
-        document.querySelector('.header-bar-x-icon').style.display = 'block';
+        document.querySelector('.header-nav').classList.add('menu-open');
         document.body.style.overflow = 'hidden';
     }
 
     function closeMenu() {
-        document.querySelector('.header-burger').classList.remove('active');
-        document.querySelector('.header-bar-burger-icon').style.display = 'block';
-        document.querySelector('.header-bar-theme-btn').style.display = 'block';
-        document.querySelector('.header-bar-x-icon').style.display = 'none';
+        document.querySelector('.header-nav').classList.remove('menu-open');
         document.body.style.overflow = '';
     }
     </script>
@@ -40,7 +34,7 @@
     <header>
         <section class="header-nav">
             <section class="header-bar">
-                    <img src="/images/Logo.png" alt="website logo">
+                    <img src="/images/Logo.png" alt="website logo" class="header-bar-logo">
                 <section class="header-bar-btns">
                     <img src="/images/ThemeButton.png" alt="night theme button" class="header-bar-theme-btn">
                     <img src="/images/ic_Menu.png" alt="burger menu button" class="header-bar-burger-icon" onclick="openMenu()">
@@ -48,6 +42,7 @@
                 </section>
             </section>
             <section class="header-burger">
+                <span class="header-burger-logo">CareerPathNow</span>
                 <ul class="header-burger-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About US</a></li>
@@ -55,8 +50,13 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <ul class="header-burger-sign">
-                    <li><a href="#">Sign In</a></li>
-                    <li><button class="header-burger-sign-btn">Free Trial</button></li>
+                    <li><img src="/images/ThemeButton.png" alt="night theme button" class="header-bar-theme-btn-desk"></li>
+                    <li>
+                        <ul class="header-burger-sign-desk">
+                            <li><a href="#">Sign In</a></li>
+                            <li><button class="header-burger-sign-btn">Free Trial</button></li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
         </section>
@@ -76,17 +76,56 @@
         <section class="main-hero">
             <section class="main-hero-desc">
                 <h1 class="main-hero-desc-title">CareerPathNow</h1>
+                <h1 class="main-hero-desc-title-desk"><span class="title-color">Career</span> Path Now</h1>
                 <p class="main-hero-desc-text">CareerPathNow is a renowned career counselling organization that helps individuals make informed decisions about their career paths.</p>
                 <section class="main-hero-desc-buttons">
                     <button class="main-hero-desc-buttons-btn">Get Started</button>
                     <button class="main-hero-desc-buttons-arrow"><img src="/images/Arrow.png" alt="learn more button"></button>
                     <a class="main-hero-desc-buttons-link">Learn More</a>
                 </section>
+                <section class="main-hero-desc-students">
+                    <img src="./images/student1.png" alt="student1" class="main-hero-desc-student">
+                    <img src="./images/student2.png" alt="student2" class="main-hero-desc-student other">
+                    <img src="./images/student3.png" alt="student3" class="main-hero-desc-student other">
+                    <p class="main-hero-desc-students-text">10K+ satisfied students</p>
 
+                </section>
             </section>
             <section class="main-hero-picture">
+                <section class="main-hero-picture-box">
+                    <section class="main-hero-picture-container">
+                        <div class="main-hero-picture-container-normal">
+                            <h4 class="main-hero-picture-container-title">Our Happy Users</h4>
+                            <p class="main-hero-picture-container-subtitle">200+ Online User</p>
+                            <button class="main-hero-picture-container-button">+</button>
+                        </div>
+                        <div class="main-hero-picture-container-abnormal">
+                            <h4 class="main-hero-picture-container-title">27K</h4>
+                            <p class="main-hero-picture-container-subtitle">Member Joined</p>
+                            <section class="main-hero-picture-container-abnormal-icons">
+                                <img src="/images/person1.png" alt="icon1" class="main-hero-picture-container-abnormal-icon">
+                                <img src="/images/person2.png" alt="icon2" class="main-hero-picture-container-abnormal-icon others">
+                                <img src="/images/person3.png" alt="icon3" class="main-hero-picture-container-abnormal-icon others">
+                                <img src="/images/person4.png" alt="icon4" class="main-hero-picture-container-abnormal-icon others">
+                            </section>
+                        </div>
+                        <div class="main-hero-picture-container-abnormal">
+                            <h4 class="main-hero-picture-container-title">27K</h4>
+                            <p class="main-hero-picture-container-subtitle">Member Joined</p>
+                            <section class="main-hero-picture-container-icons">
+                                <img src="/images/person1.png" alt="icon1" class="main-hero-picture-container-abnormal-icon">
+                                <img src="/images/person2.png" alt="icon2" class="main-hero-picture-container-abnormal-icon others">
+                                <img src="/images/person3.png" alt="icon3" class="main-hero-picture-container-abnormal-icon others">
+                                <img src="/images/person4.png" alt="icon4" class="main-hero-picture-container-abnormal-icon others">
+                            </section>
+                        </div>
+                    </section>
 
-            </section>
+                    <img src="/images/tablet-lady.png" alt="lady looking at a tablet" class="main-hero-picture-box-focus">
+                        
+                    </section>
+                    
+                </section>
         </section>
         <section class="Main-about"></section>
         <section class="Main-services"></section>
