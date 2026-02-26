@@ -1,0 +1,84 @@
+@use "./style";
+
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header-bar {
+    width: 100vw;
+    height: 6.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+
+    &-btns {
+        display: flex;
+        flex-direction: row;
+        gap: 3.5rem;
+        
+    }
+
+    &-theme-btn {
+        display: block;
+    }
+
+    &-burger-icon {
+        display: block;
+    }
+    &-x-icon {
+        display: none;
+    }
+}
+
+.header-burger {
+    @include flex-col-center();
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    gap: 4.3rem;
+    padding: 6rem 0;
+
+    position: fixed;
+    top: 6.4rem;
+    left: 0;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 
+        transform 0.35s ease,
+        opacity 0.35s ease;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &-links {
+        @include flex-col-center();
+        font-size: 1.6rem;
+        gap: 3.5rem;
+        width: 15rem;
+    }
+
+    &-sign {
+        @include flex-col-center();
+        width: 15rem;
+        font-size: 1.6rem;
+        gap: 2.8rem;
+
+        &-btn {
+            @include style.btn-shape(15.3rem, 5.4rem);
+            background-color: #000000;
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+}

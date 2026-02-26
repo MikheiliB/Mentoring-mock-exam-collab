@@ -4,7 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mock-Exam</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main-hero.css">
+
+    <script>
+    function openMenu() {
+        document.querySelector('.header-burger').classList.add('active');
+        document.querySelector('.header-bar-burger-icon').style.display = 'none';
+        document.querySelector('.header-bar-theme-btn').style.display = 'none';
+        document.querySelector('.header-bar-x-icon').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        document.querySelector('.header-burger').classList.remove('active');
+        document.querySelector('.header-bar-burger-icon').style.display = 'block';
+        document.querySelector('.header-bar-theme-btn').style.display = 'block';
+        document.querySelector('.header-bar-x-icon').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    </script>
+
 </head>
 <body>
     <!--   
@@ -15,8 +39,26 @@
      
     <header>
         <section class="header-nav">
-            <section class="header-bar"></section>
-            <section class="header-burger"></section>
+            <section class="header-bar">
+                    <img src="/images/Logo.png" alt="website logo">
+                <section class="header-bar-btns">
+                    <img src="/images/ThemeButton.png" alt="night theme button" class="header-bar-theme-btn">
+                    <img src="/images/ic_Menu.png" alt="burger menu button" class="header-bar-burger-icon" onclick="openMenu()">
+                    <img src="/images/CloseButton.png" alt="close menu button" class="header-bar-x-icon" onclick="closeMenu()">
+                </section>
+            </section>
+            <section class="header-burger">
+                <ul class="header-burger-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About US</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="header-burger-sign">
+                    <li><a href="#">Sign In</a></li>
+                    <li><button class="header-burger-sign-btn">Free Trial</button></li>
+                </ul>
+            </section>
         </section>
     </header>
 
@@ -31,7 +73,21 @@
      -->
 
     <main>
-        <section class="Main-hero"></section>
+        <section class="main-hero">
+            <section class="main-hero-desc">
+                <h1 class="main-hero-desc-title">CareerPathNow</h1>
+                <p class="main-hero-desc-text">CareerPathNow is a renowned career counselling organization that helps individuals make informed decisions about their career paths.</p>
+                <section class="main-hero-desc-buttons">
+                    <button class="main-hero-desc-buttons-btn">Get Started</button>
+                    <button class="main-hero-desc-buttons-arrow"><img src="/images/Arrow.png" alt="learn more button"></button>
+                    <a class="main-hero-desc-buttons-link">Learn More</a>
+                </section>
+
+            </section>
+            <section class="main-hero-picture">
+
+            </section>
+        </section>
         <section class="Main-about"></section>
         <section class="Main-services"></section>
         <section class="Main-stories"></section>

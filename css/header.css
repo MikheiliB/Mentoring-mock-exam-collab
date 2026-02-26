@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-bar {
+  width: 100vw;
+  height: 6.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+}
+.header-bar-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+}
+.header-bar-theme-btn {
+  display: block;
+}
+.header-bar-burger-icon {
+  display: block;
+}
+.header-bar-x-icon {
+  display: none;
+}
+
+.header-burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  gap: 4.3rem;
+  padding: 6rem 0;
+  position: fixed;
+  top: 6.4rem;
+  left: 0;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.header-burger.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.header-burger-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 3.5rem;
+  width: 15rem;
+}
+.header-burger-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  font-size: 1.6rem;
+  gap: 2.8rem;
+}
+.header-burger-sign-btn {
+  width: 15.3rem;
+  height: 5.4rem;
+  border-radius: 0.8rem;
+  background-color: #000000;
+  color: white;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=header.css.map */
