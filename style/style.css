@@ -1,103 +1,144 @@
-html {
-  font-size: 62.5%;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Yeseva+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .main-about {
-  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .about-container {
-  max-width: 116.1rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  position: relative;
-}
-
-.about-container::before {
-  content: "";
-  position: absolute;
-  border: 0.6rem solid rgb(24, 59, 86);
-  border-top: 0.6rem solid transparent;
-  border-radius: 50%;
-  position: relative;
-  width: 12rem;
-  height: 12rem;
 }
 
 .about-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 26px;
 }
 .about-header .section-title-h2 {
-  color: rgb(24, 59, 86);
-  font-size: clamp(3.6rem, 5vw, 4.2rem);
   font-weight: 400;
-  padding: 2rem;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: clamp(36px, 5vw, 60px);
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(24, 59, 86);
 }
-.about-header .section-subtitle-p {
-  font-size: clamp(1.6rem, 5vw, 1.8rem);
+.about-header .section-title-h2 .section-subtitle-p {
+  font-size: clamp(16px, 5vw, 18px);
   color: rgb(7, 18, 16);
   font-weight: 400;
+  line-height: 28px;
 }
 
 .about-cards-wrapper {
   width: 100%;
-  margin-bottom: 2.6rem;
-}
-
-.about-card {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  gap: 30px;
+  margin-top: 55px;
+  position: relative;
+}
+.about-cards-wrapper .about-card {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
   align-items: center;
   text-align: center;
+  flex-direction: column;
+  padding-inline: 24px;
   background-color: rgb(255, 255, 255);
-  border-radius: clamp(1.139rem, 5vw, 1.6rem);
+  border-radius: clamp(11.39px, 5vw, 16px);
   box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-
-.card-icon {
-  display: inline-block;
-  transform: translateY(-30%);
+.about-cards-wrapper .card-icon {
+  display: flex;
+  transform: translateY(-50%);
 }
 
 .card-title-h3 {
-  font-family: Plus Jakarta Sans;
   font-weight: 600;
-  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  font-size: clamp(18px, 4vw, 22px);
   text-align: center;
-  gap: 1.06rem;
 }
 
 .card-text-p {
-  font-family: Poppins;
   font-weight: 400;
-  font-size: clamp(1.6rem, 5wv, 1.659rem);
-  line-height: 2.8rem;
+  font-size: clamp(16px, 4vw, 18px);
+  padding: 20px;
+  line-height: 180%;
   color: rgb(7, 18, 16);
-  margin-bottom: 4.81rem;
+  margin-bottom: 48.19px;
 }
 
-@media (max-width: 76.8rem) {
-  .circle::before {
+.card-ellipse {
+  position: absolute;
+  color: rgb(24, 59, 86);
+  width: 120px;
+  bottom: 20px;
+  left: 50px;
+  z-index: -1;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 1.42px 2.85px 27.04px 0px rgba(43, 35, 35, 0.08);
+}
+
+.about-btn {
+  display: block;
+  width: 105px;
+  height: 37px;
+  background-color: rgb(5, 42, 68);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: center;
+  align-items: center;
+  margin: 20px auto 0;
+}
+
+@media (max-width: 768px) {
+  .card-ellipse {
     display: none;
   }
 }
-@media (max-width: 76.8rem) {
+@media (min-width: 768px) {
+  .section-title-h2 {
+    color: rgb(0, 0, 0);
+  }
+}
+@media (min-width: 768px) {
   .about-cards-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin-top: 55px;
+    gap: 24px;
   }
-  .about-card {
-    flex: 1 1 calc(33.333% - 1rem);
+  .about-btn {
+    flex-basis: 100%;
+    max-width: 176px;
+    max-height: 54px;
   }
 }
-.test {
-  color: red;
-}
-
 *, *:before, *:after {
   box-sizing: border-box;
 }

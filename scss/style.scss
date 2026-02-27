@@ -1,7 +1,11 @@
 // START: About, Services, Stories Sections - (Julie)
-@use "about";
-@use "services";
-@use "stories";
+@use "./base/reset";
+@use "./base/fonts";
+@use "./layouts/about";
+@use "./layouts/services";
+@use "./layouts/stories";
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
 // END: My sections
 
 *, *:before, *:after{
