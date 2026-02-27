@@ -172,12 +172,15 @@ a {
   .main-hero {
     flex-direction: row;
     padding: 9rem 10rem;
-    gap: 36.5rem;
+    gap: 16rem;
+    overflow-x: hidden;
+    position: relative;
   }
   .main-hero-desc {
     align-items: flex-start;
     width: 57.9rem;
-    height: 31.1rem;
+    position: relative;
+    left: 2rem;
   }
   .main-hero-desc-title {
     display: none;
@@ -232,8 +235,17 @@ a {
   .main-hero-desc-student.other {
     margin-left: -2rem;
   }
-  .main-hero-picture {
+  .main-hero-picture-box {
+    width: 50.6rem;
+    height: 40.8rem;
+  }
+  .main-hero-picture-box-focus {
+    right: -14rem;
+  }
+  .main-hero-picture-container {
     transform: scale(250%);
+    top: 12rem;
+    left: -3rem;
   }
 }
 

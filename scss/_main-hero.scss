@@ -167,12 +167,15 @@ $title-color: #E8DB84;
     .main-hero {
         flex-direction: row;
         padding: 9rem 10rem;
-        gap: 36.5rem;
+        gap: 16rem;
+        overflow-x: hidden;
+        position: relative;
 
         &-desc {
             align-items: flex-start;
             width: 57.9rem;
-            height: 31.1rem;
+            position: relative;
+            left: 2rem;
 
             &-title {
                 display: none;
@@ -238,7 +241,20 @@ $title-color: #E8DB84;
         }
 
         &-picture {
-            transform: scale(250%);
+            &-box {
+                width: 50.6rem;
+                height: 40.8rem;
+
+                &-focus {
+                    right: -14rem;
+                }
+            }
+
+            &-container {
+                transform: scale(250%);
+                top: 12rem;
+                left: -3rem;
+            }
         }
     }
 
