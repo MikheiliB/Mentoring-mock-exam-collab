@@ -29,7 +29,6 @@ $mob-main-titl-color: rgba(24, 59, 86, 1);
     height: 12rem;
     bottom: -4rem;
     left: -4rem;
-
 }
 
 .about-header {
@@ -64,12 +63,12 @@ $mob-main-titl-color: rgba(24, 59, 86, 1);
     align-items: center;
     text-align: center;;
     background-color: $card-bg;
-    border-radius: clamp(1.139rem, 5vw, 1.6rem);
+    border-radius: clamp(1.139rem, 2.5vw, 1.6rem);
     box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.08);
 }
 .card-icon {
     display: flex;
-    transform: translateY(-70%);
+    transform: translateY(-50%);
 }
 .card-title-h3 {
     font-family: Plus Jakarta Sans;
@@ -81,26 +80,25 @@ $mob-main-titl-color: rgba(24, 59, 86, 1);
 .card-text-p {
     font-family: Poppins;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     padding: 2rem;
     line-height: 180%;
     color: $subtitle-text-color;
     margin-bottom: 4.81rem;
+    flex-direction: column;
 }
 
-@media (max-width: 76.8rem) {
+@media (min-width: 76.8rem) {
     .about-container::before {
         display: none;
-    }
-   
+    } 
 }
     
 @media (max-width: 102.4rem) {
     .about-cards-wrapper {
         flex-direction: row;     
         justify-content:space-between;     
-}
-       
+}     
     .about-card {
         max-width: 32rem;
     }
