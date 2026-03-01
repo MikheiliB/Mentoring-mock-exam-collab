@@ -1,7 +1,15 @@
-@use "./layout/header";
-@use "./layout/main-hero";
+// START: About, Services, Stories Sections - (Julie)
+@use "./base/reset";
+@use "./base/fonts";
+@use "./layouts/about";
+@use "./layouts/services";
+@use "./layouts/stories";
 @use "./abstracts/variables";
 @use "./abstracts/mixins";
+// END: My sections
+
+@use "./layout/header";
+@use "./layout/main-hero";
 
 
 * {
@@ -26,7 +34,21 @@ ol, ul{
   list-style: none;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+blockquote, q{
+  quotes: none;
 }
+
+blockquote:before, blockquote:after, q:before, q:after{
+  content: '';
+  content: none;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input{
+  border-radius: 0;
+}
+
