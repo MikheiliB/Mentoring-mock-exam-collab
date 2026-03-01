@@ -1,3 +1,21 @@
+
+
+
+// START: About, Services, Stories Sections - (Julie)
+@use "./base/reset";
+@use "./base/fonts";
+@use "./layouts/about";
+@use "./layouts/services";
+@use "./layouts/stories";
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
+// END: My sections
+
+@use "./layout/header";
+@use "./layout/main-hero";
+@use "./layout/contact";
+@use "./layout/reviews";
+
 @use "./layout/footer";
 
 
@@ -9,6 +27,8 @@
     font-weight: 400;
     font-style: normal;
 }
+
+
 
 html{
     font-size: 62.5%;
@@ -23,7 +43,5 @@ ol, ul{
   list-style: none;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+
+
