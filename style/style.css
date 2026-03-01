@@ -1,16 +1,11 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Yeseva+One&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 button {
-  all: unset;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -20,6 +15,11 @@ li {
   padding: 0;
   display: flex;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .main-about {
@@ -385,7 +385,6 @@ li {
   color: rgb(7, 18, 16);
 }
 
-
 .stories-media-container {
   width: 100%;
   max-width: 278px;
@@ -492,8 +491,6 @@ li {
     margin-left: 40px;
   }
 }
-*, *:before, *:after {
-  box-sizing: border-box;
 .header-bar {
   width: 100%;
   height: 6.4rem;
@@ -894,33 +891,7 @@ li {
     left: -3rem;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-footer, header, nav, section, main {
-  display: block;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-  
-  .footer-contact {
+.footer-contact {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -932,7 +903,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 2.4rem 1.45rem;
   gap: 1.6rem;
 }
@@ -1010,7 +980,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 3.2rem 2.4rem;
   gap: 1.6rem;
 }
@@ -1150,6 +1119,27 @@ a {
   .main-reviews-card-desc {
     font-size: 1.6rem;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */
