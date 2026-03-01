@@ -1,27 +1,87 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.footer-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3.2rem 2.45rem;
+  background-color: #E8DB84;
+  border-radius: 1rem;
+}
+.footer-contact-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.4rem 1.45rem;
+  gap: 1.6rem;
+}
+.footer-contact-items-title {
+  text-align: center;
+  font-size: 2.8rem;
   font-weight: 400;
-  font-style: normal;
 }
-
-html {
-  font-size: 62.5%;
+.footer-contact-items-desc {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
-
-footer, header, nav, section, main {
-  display: block;
+.footer-contact-items-form {
+  display: grid;
+  grid-template-columns: 24.2rem;
+  grid-template-rows: 5.8rem 5.8rem 5.8rem 5.8rem 20.7rem;
+  gap: 1.2rem;
 }
-
-ol, ul {
-  list-style: none;
+.footer-contact-items-form-input {
+  border-radius: 0.8rem;
+  border: none;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
+.footer-contact-items-form-input.gap {
+  margin-bottom: 0.8rem;
+}
+.footer-contact-items-form-input::placeholder {
+  padding-left: 2.4rem;
+}
+.footer-contact-items-form-textbox {
+  border-radius: 0.8rem;
+  border: none;
+}
+.footer-contact-items-form-textbox::placeholder {
+  padding-top: 1.9rem;
+  padding-left: 2.4rem;
+}
+.footer-contact-items-button {
+  width: 17.6rem;
+  height: 5.4rem;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: #052A44;
+  color: white;
+}
+@media (min-width: 76.8rem) {
+  .footer-contact {
+    margin: 8rem 12rem;
+  }
+  .footer-contact-items {
+    padding: 4rem 18.25rem;
+  }
+  .footer-contact-items-title {
+    font-size: 4.2rem;
+    font-weight: 600;
+  }
+  .footer-contact-items-desc {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  .footer-contact-items-form {
+    grid-template-columns: 43.1rem 43.1rem;
+    grid-template-rows: 5.8rem 5.8rem 20.7rem;
+  }
+  .footer-contact-items-form-input.gap {
+    margin-bottom: 0;
+  }
+  .footer-contact-items-form-textbox.span {
+    grid-column: 1/3;
+  }
 }
 
 .main-reviews {
@@ -170,4 +230,30 @@ a {
   }
 }
 
-/*# sourceMappingURL=reviews.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */

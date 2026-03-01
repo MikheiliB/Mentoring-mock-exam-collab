@@ -1,24 +1,9 @@
-@use "./style";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
 
-$title-color: #183B56;
-$desc-color: #5A7184;
-$btn-color: #052A44;
-
-@mixin auto-grid($min-width, $gap: 2.4rem) {
-    display: grid;
-    gap: $gap;
-    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
-}
-
-@mixin flex-col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 .main-reviews {
-    @include flex-col-center();
+    @include mixins.flex-col-center();
     padding: 3.2rem 2.4rem;
     gap: 1.6rem;
     
@@ -26,19 +11,19 @@ $btn-color: #052A44;
         text-align: center;
         font-size: 2.8rem;
         font-weight: 400;
-        color: $title-color;
+        color: variables.$title-color;
     }
 
     &-desc {
         text-align: center;
         font-size: 1.6rem;
         font-weight: 400;
-        color: $desc-color;
+        color: variables.$desc-color;
         margin-bottom: 0.8rem;
     }
 
     &-cards {
-        @include auto-grid(26.2rem, 2.4rem);
+        @include mixins.auto-grid(26.2rem, 2.4rem);
     }
 
     &-card {
@@ -88,13 +73,13 @@ $btn-color: #052A44;
 
     &-button {
         margin-top: 1.6rem;
-        @include style.btn-shape(8.9rem, 3.7rem);  
-        background-color: $btn-color;
+        @include mixins.btn-shape(8.9rem, 3.7rem);  
+        background-color: variables.$btn-color;
         color: white;
         transition: background-color 0.2s linear 0.1ms;
 
         &:hover {
-            background-color: darken($btn-color,5%);
+            background-color: darken(variables.$btn-color,5%);
         }
     }
 
@@ -118,13 +103,13 @@ $btn-color: #052A44;
         }
 
         &-right {
-            @include style.btn-shape(4.8rem, 4.9rem);
+            @include mixins.btn-shape(4.8rem, 4.9rem);
             border-radius: 0.6rem;
-            background-color: $btn-color;
+            background-color: variables.$btn-color;
             transition: background-color 0.2s linear 0.1ms, transform 0.2s linear 0.1ms;
 
             &:hover {
-                background-color: darken($btn-color,5%);
+                background-color: darken(variables.$btn-color,5%);
                 transform: scale(105%)
             }
         }
