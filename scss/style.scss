@@ -1,5 +1,6 @@
 
 
+
 // START: About, Services, Stories Sections - (Julie)
 @use "./base/reset";
 @use "./base/fonts";
@@ -14,6 +15,8 @@
 @use "./layout/main-hero";
 @use "./layout/contact";
 @use "./layout/reviews";
+
+@use "./layout/footer";
 
 
 * {
