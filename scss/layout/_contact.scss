@@ -1,0 +1,102 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3.2rem 2.45rem;
+    background-color: variables.$form-color;
+    border-radius: 1rem;
+
+    &-items {
+        @include mixins.flex-col-center();
+        padding: 2.4rem 1.45rem;
+        gap: 1.6rem;
+
+        &-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 400;
+        }
+
+        &-desc {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        &-form {
+            display: grid;
+            grid-template-columns: 24.2rem;
+            grid-template-rows: 5.8rem 5.8rem 5.8rem 5.8rem 20.7rem;
+            gap: 1.2rem;
+
+            &-input {
+                border-radius: 0.8rem;
+                border: none;
+
+                &.gap {
+                    margin-bottom: 0.8rem;
+                }
+
+                &::placeholder {
+                    padding-left: 2.4rem;
+                }
+            }
+
+            &-textbox {
+                border-radius: 0.8rem;
+                border: none;
+
+                &::placeholder {
+                    padding-top: 1.9rem;
+                    padding-left: 2.4rem;
+                }
+            }
+        }
+
+        &-button {
+            @include mixins.btn-shape(17.6rem, 5.4rem);
+            background-color: variables.$btn-color;
+            color: white;
+        }
+    }
+
+    @media(min-width:76.8rem) {
+        margin: 8rem 12rem;
+
+        &-items {
+            padding: 4rem 18.25rem;
+
+            &-title {
+                font-size: 4.2rem;
+                font-weight: 600;
+            }
+            &-desc {
+                font-size: 1.8rem;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+
+            &-form {
+                grid-template-columns: 43.1rem 43.1rem;
+                grid-template-rows: 5.8rem 5.8rem 20.7rem;
+
+                &-input {
+                    &.gap {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &-textbox {
+                    &.span {
+                        grid-column: 1/3;
+                    }
+                }
+            }
+
+        }
+    }
+}

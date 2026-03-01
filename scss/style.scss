@@ -1,3 +1,5 @@
+
+
 // START: About, Services, Stories Sections - (Julie)
 @use "./base/reset";
 @use "./base/fonts";
@@ -10,6 +12,8 @@
 
 @use "./layout/header";
 @use "./layout/main-hero";
+@use "./layout/contact";
+@use "./layout/reviews";
 
 
 * {
@@ -19,6 +23,8 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
 }
 
 html{
@@ -34,21 +40,5 @@ ol, ul{
   list-style: none;
 }
 
-blockquote, q{
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after{
-  content: '';
-  content: none;
-}
-
-table{
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-input{
-  border-radius: 0;
 }
 
